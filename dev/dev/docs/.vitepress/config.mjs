@@ -8,11 +8,23 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       // { text: "Home", link: "/" },
-      { text: "指南", link: "/api-examples" },
+      { text: "指南", link: "/document/quick-start.md" },
       { text: "元件庫", link: "/comp/comp_utility/icon.md" },
     ],
 
     sidebar: {
+      // 安裝及下載相關資訊
+      "/document/": [
+        {
+          text: "開始",
+          items: [
+            { text: "快速開始", link: "/document/quick-start.md" },
+            { text: "NVM 安裝方式", link: "/document/install-nvm.md" },
+            { text: "Node.js 安裝方式", link: "/document/install-node.md" },
+          ],
+        },
+      ],
+      // 元件簡介
       "/comp/": [
         {
           text: "通用元件",
@@ -25,9 +37,12 @@ export default defineConfig({
           text: "表單元件",
 
           items: [
-            { text: "checkAll", link: "/comp/comp_form/checkAll.md" },
-            { text: "checkbox", link: "/comp/comp_form/checkbox.md" },
-            { text: "checkLimit", link: "/comp/comp_form/checkLimit.md" },
+            { text: "checkAll（修改中）", link: "/comp/comp_form/checkAll.md" },
+            { text: "checkbox（修改中）", link: "/comp/comp_form/checkbox.md" },
+            {
+              text: "checkLimit（修改中）",
+              link: "/comp/comp_form/checkLimit.md",
+            },
             {
               text: "輸入框",
               // collapsed: true,
@@ -42,10 +57,16 @@ export default defineConfig({
               ],
             },
 
-            { text: "radiobutton", link: "/comp/comp_form/radiobutton.md" },
-            { text: "radioCombo", link: "/comp/comp_form/radioCombo.md" },
-            { text: "radioSet", link: "/comp/comp_form/radioSet.md" },
-            { text: "select", link: "/comp/comp_form/Select.md" },
+            {
+              text: "radiobutton（修改中）",
+              link: "/comp/comp_form/radiobutton.md",
+            },
+            {
+              text: "radioCombo（修改中）",
+              link: "/comp/comp_form/radioCombo.md",
+            },
+            { text: "radioSet（修改中）", link: "/comp/comp_form/radioSet.md" },
+            { text: "select（修改中）", link: "/comp/comp_form/Select.md" },
           ],
         },
       ],

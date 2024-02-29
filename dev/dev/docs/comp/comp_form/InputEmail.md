@@ -1,4 +1,4 @@
-# Input Email<Badge type="info" text="複合元件" />
+# Input Email <Badge type="info" text="複合元件" />
 
 ![input email component](../../.vuepress/public/inputemail.png)
 
