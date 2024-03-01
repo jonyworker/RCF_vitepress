@@ -1,36 +1,29 @@
-# Radio button
+# Radio button <Badge type="info" text="單一元件" />
 
-單選按鈕
+## 簡介
 
-## 基礎樣式
+`Radio button` 元件為基礎的單選框。 
 
-### Import
+## VSCode Snippet
 
-```jsx
-import RadioButton from ''
+```md
+j還沒設定
 ```
-```html
+
+## 元件程式碼
+
+```javascript
+import radio-btn from ''
+```
+```javascript
 <radio 
     :data="formStore.radioArray"
-    name="boxes"
-    radio="left" text="desc" label-txt="三選一"
+    name="列表名稱"
+    radio="left" text="desc" 
+    label-txt="三選一"
 >
 </radio> 
 ```
-
-
-
-<!-- ![checkbox.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/checkbox.png)
-
-![Frame 7.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_7.png)
-
-![Frame 8.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_8.png)
-
-![Frame 9.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_9.png)
-
-![Frame 10.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_10.png)
-
-![Frame 11.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_11.png) -->
 
 <div style="display: flex;">
     <div>
