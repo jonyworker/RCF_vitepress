@@ -8,19 +8,25 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       // { text: "Home", link: "/" },
-      { text: "指南", link: "/document/quick-start.md" },
+      { text: "指南", link: "/guide/quick-start.md" },
       { text: "元件庫", link: "/comp/comp_utility/icon.md" },
     ],
 
     sidebar: {
       // 安裝及下載相關資訊
-      "/document/": [
+      "/guide/": [
         {
           text: "開始",
           items: [
-            { text: "快速開始", link: "/document/quick-start.md" },
-            { text: "NVM 安裝方式", link: "/document/install-nvm.md" },
-            { text: "Node.js 安裝方式", link: "/document/install-node.md" },
+            { text: "快速開始", link: "/guide/quick-start.md" },
+            { text: "編輯器設定", link: "/guide/vscode-snippet.md" },
+          ],
+        },
+        {
+          text: "環境設定",
+          items: [
+            { text: "NVM 安裝方式", link: "/guide/install-nvm.md" },
+            { text: "Node.js 安裝方式", link: "/guide/install-node.md" },
           ],
         },
       ],
@@ -30,7 +36,7 @@ export default defineConfig({
           text: "通用元件",
           items: [
             { text: "icon", link: "/comp/comp_utility/icon.md" },
-            { text: "button", link: "/comp/comp_utility/button.md" },
+            { text: "button(ing)", link: "/comp/comp_utility/button.md" },
           ],
         },
         {
