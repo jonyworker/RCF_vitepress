@@ -12,7 +12,8 @@ $ cd 目標資料夾
 
 ## 建立 Vite 應用程式
 
-::: tip 兼容性注意
+::: warning
+兼容性注意！
 Vite 需要 [Node.js](https://nodejs.org/en/) 版本 18+，20+。
 安裝前請執行下列指令檢查 node 版本
 
@@ -100,23 +101,3 @@ $ bun run dev
 
 - 建議的 IDE 設定是 [Visual Studio Code](https://code.visualstudio.com/) + [Volar extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
 - 要了解底層建制工具 Vite 的更多訊息，請查看 [Vite docs](https://vitejs.dev).
-
-## VSCode Snippet 安裝
-
-::: tip
-此 Snippet 外掛只允許再 VSCode 上安裝執行，請確保已安裝 [Visual Studio Code](https://code.visualstudio.com/)。
-:::
-
-這裡提供了一個工具能幫忙快速生成元件程式碼請點擊連結下載，並儲存於下列文件路徑中：
-
-### PC 儲存路徑
-
-```cmd
-C:\Users\user\AppData\Rooming\Code\User\snippets
-```
-
-### MAC 儲存路徑
-
-```cmd
-~/Library/Application Support/Code/User/snippets
-```
