@@ -1,36 +1,29 @@
-# Radio button
+# Radio button <Badge type="info" text="單一元件" />
 
-單選按鈕
+## 簡介
 
-## 基礎樣式
+`Radio button` 元件為基礎的單選框。 
 
-### Import
+## VSCode Snippet
 
-```jsx
-import RadioButton from ''
+```md
+j還沒設定
 ```
-```html
+
+## 元件程式碼
+
+```javascript
+import radio-btn from ''
+```
+```javascript
 <radio 
     :data="formStore.radioArray"
-    name="boxes"
-    radio="left" text="desc" label-txt="三選一"
+    name="列表名稱"
+    radio="left" text="desc" 
+    label-txt="三選一"
 >
 </radio> 
 ```
-
-
-
-<!-- ![checkbox.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/checkbox.png)
-
-![Frame 7.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_7.png)
-
-![Frame 8.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_8.png)
-
-![Frame 9.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_9.png)
-
-![Frame 10.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_10.png)
-
-![Frame 11.png](Radio%20button%20e4e6a46ccd024801aa725229cf1dd270/Frame_11.png) -->
 
 <div style="display: flex;">
     <div>
@@ -64,22 +57,22 @@ import RadioButton from ''
 - check: right/ text: title -->
 
 ### 樣式props
-| prop name | type | 變數 | 功能 |
-| :-- | :-- |:--| :--|
-| radio | String | `left (default)` `right` | 單選鈕位置 |
-| text | String | `title (default)` `desc` `both` | 字體樣式 |
+| prop name | type   | 預設    | 說明                                             |
+| :-------- | :----- | :------ | :---------------------------------------------- |
+| radio     | `String` | `left`  | 單選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | 
+| text      | `String` | `title` | 單選框字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
+| checked   | `Boolean` | `false` | 可控制選擇狀態，`true`為選擇，`false`為未選擇 |
 
 ::: tip ❗注意
  樣式props不可隨意混用 
 :::
 
 ### 資料props
-| prop name | type | 變數 | 功能 |
-| :-- | :-- |:--| :--|
-| name | String | 自行設定 | 傳遞資料用，同html屬性 |
-| value | String | 自行設定 | 傳遞資料用，同html屬性 |
-| checked | Boolean | `true` `false (default)` | 是否勾選 |
+| prop name | type   |  功能      | requried |
+| :-------- | :----- |:---------- | :------ |
+| name      | `String` |  傳遞資料用，同html屬性，指定送出去的該筆資料要用什麼名稱 | true |
+| v-model     | `String` |  傳遞資料用，同html `value`屬性，指定送出去的該筆資料的值 | true |
 
 ## 複合元件
-[Radio Combo](../compo/radioCombo.md)  
-[Radio Set](../compo/radioSet.md)
+[Radio Combo](./radioCombo.md)  
+[Radio Set](./radioSet.md)
