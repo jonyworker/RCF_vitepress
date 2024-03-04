@@ -40,16 +40,16 @@ jinput:select
     :options="selectOptions"
     :optionLabel="selectData?.label"
     v-model="selectData"
-    placeholder="placeholder提示文字"
+    placeholder="輸入框提醒文字"
   ></Select>
 </InputField>
 ```
 
 ## 元件 Props
 
-| Prop Name    | type   | 預設         | 說明                                                                            | required |
-| :----------- | :----- | :----------- | :------------------------------------------------------------------------------ | :------- |
-| options      | any[]  | Null         | 下拉選單資料，物件陣列，資料設定規則如下 [ {label: ‘選項標題’,value: 選項值},…] | true     |
-| option label | String | Null         | 取得當前選項標題                                                                | true     |
-| modelValue   | any    | Null         | v-model 連動資料                                                                | true     |
-| placeholder  | String | "請下拉選擇" | 設定選單提示文字                                                                | false    |
+| Prop Name    | type     | 預設         | 說明                                                                            | required |
+| :----------- | :------- | :----------- | :------------------------------------------------------------------------------ | :------- |
+| options      | `any[]`  | Null         | 下拉選單資料，物件陣列，資料設定規則如下 [ {label: ‘選項標題’,value: 選項值},…] | true     |
+| option label | `String` | Null         | 取得當前選項標題                                                                | true     |
+| modelValue   | `any`    | Null         | v-model 連動資料                                                                | true     |
+| placeholder  | `String` | "請下拉選擇" | 設定選單提示文字                                                                | false    |

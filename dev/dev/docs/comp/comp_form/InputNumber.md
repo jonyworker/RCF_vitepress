@@ -49,6 +49,6 @@ jinput:number（還沒做）
 
 ## 元件 Props
 
-| Prop Name  | type | 預設 | 說明             | required |
-| :--------- | :--- | :--- | :--------------- | :------- |
-| modelValue | any  | Null | v-model 連動資料 | true     |
+| Prop Name  | type    | 預設 | 說明               | required |
+| :--------- | :------ | :--- | :----------------- | :------- |
+| modelValue | `any[]` | Null | 與父層雙向綁定資料 | true     |
