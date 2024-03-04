@@ -1,22 +1,29 @@
 # Radio Set
 
-單選列表
+## 簡介
 
-**基礎樣式** [Radio button](../basic/radiobutton.md) 
+`Radio Combo` 是以[Radio button](../basic/radiobutton.md) 為基礎搭建的單選列表元件，使用者可以直接取用元件並帶入資料就能渲染出選項。
 
-### Import
+## VSCode Snippet（未設定）
 
-```jsx
-import radioSet from './UI/RadioSet.vue'
+```md
+jinput:email（未設定）
 ```
 
-```jsx
+## 元件程式碼
+
+```javascript
+import radio-set from './UI/RadioSet.vue'
+```
+
+```javascript
 <radioSet 
-    :data="radioArray"
-    name="boxes"
-    radio="left" text="desc" label-txt="三選一"
->
-</radioSet>
+    :data="data"
+    name="name"
+    radio="left" 
+    text="desc" 
+    label-txt="列表標題"
+></radioSet>
 ```
 
 <!-- 圖片 -->
@@ -33,15 +40,15 @@ import radioSet from './UI/RadioSet.vue'
 </div> -->
 
 ### 樣式props
-| prop name | type | 變數 | 功能 |
-| :-- | :-- |:--| :--|
-| radio | String | `left (default)` `right` | 單選鈕位置 |
-| text | String | `title (default)` `desc` `both` | 字體樣式 |
+| prop name | type   | 預設    | 說明                                             |
+| :-------- | :----- | :------ | :---------------------------------------------- |
+| radio     | `String` | `left`  | 單選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | 
+| text      | `String` | `title` | 單選框字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
 
 ### 資料props
-| prop name | type | 功能 |
-| :-- | :-- |:--| :--|
-| data | Array | 傳入資料，需有標題`title(String)`, `敘述desc(String)`, `值value(String)` |
-| label-txt | String | 列表標題 |
-| required | Boolean | 必填 |
-| tatilHint | String | 提示字 `optional` |
+| prop name | type | 功能         | requried |
+| :-------- | :--- |:-------------| :------ |
+| data | Array | 傳入資料，需有標題`title(String)`, 敘述`desc(String)`, 值`value(String)` | true |
+| label-txt | String | 列表標題 | false |
+| required | Boolean | 必填 | optional |
+| tatilHint | String | 提示字 `optional` | optional |

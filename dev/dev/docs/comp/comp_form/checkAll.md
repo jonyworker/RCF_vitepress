@@ -4,7 +4,7 @@
 
 ## 簡介
 
-`Check All` 是以 `Checkbox` 為基礎搭建的元件，功能像 table list 標題左側勾勾。能夠一次全部選擇或一次全部取消。**基礎樣式** [Checkbox](../basic/checkbox.md)
+`Check All` 是以 [Checkbox](../basic/checkbox.md) 為基礎搭建的勾選列表元件，功能像 table list 標題左側勾勾。可以複選也能夠一次全部選擇或一次全部取消。 
 
 ## VSCode Snippet（未設定）
 
@@ -17,15 +17,20 @@ jinput:email（未設定）
 ```javascript
 <script setup>
   import { ref, computed } from 'vue';
-  import CheckSet from "./UI/CheckSet.vue";
+  import check-set from "./UI/CheckSet.vue";
 </script>
 
 <template>
-  <CheckSet
+  <check-set
     :data="formStore.checkArray"
-    check="left" master-text="both" text="title"
-    label-txt="請選箱子"
-  ></CheckSet>
+    check="left" 
+    master-text="both" 
+    text="title"
+    label-txt="組件標題顯示文字"
+    master-text-title="全選欄標題"
+    master-text-desc="全選欄註解"
+    v-model="取得勾選項目值"
+  ></check-set>
 </template>
 ```
 
@@ -45,23 +50,22 @@ jinput:email（未設定）
 
 ### 樣式 props
 
-| Prop Name   | type   | 預設  | 說明(jony)                                             | required |
-| :---------- | :----- | :---- | :----------------------------------------------------- | :------- |
-| check       | String | Left  | 勾選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | false    |
-| master-text | String | title | 全勾選欄字體樣式。`title`表示，`desc`表示，`both`表示  | false    |
-| text        | String | title | 字體樣式。`title`表示，`desc`表示，`both`表示          | false    |
+| Prop Name   | type   | 預設  | 說明(jony)                                             | 
+| :---------- | :----- | :---- | :----------------------------------------------------- | 
+| check       | `String` | `left`  | 勾選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | 
+| master-text | `String` | `title` | 全選勾選欄字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解  | 
+| text        | `String` | `title` | 子勾選欄字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
+| required  | `Boolean` | `false` | 顯示為必填，預設為`false`             | 
+| tailHint  | `String` | `false` |  `optional`顯示選填提示字            | 
 
-| prop name   | type   | 變數                            | 功能             |
-| :---------- | :----- | :------------------------------ | :--------------- |
-| check       | String | `left (default)` `right`        | 勾選框位置       |
-| master-text | String | `title (default)` `desc` `both` | 全勾選欄字體樣式 |
-| text        | String | `title (default)` `desc` `both` | 字體樣式         |
 
 ### 資料 props
 
-| prop name | type    | 功能                                                                     |
-| :-------- | :------ | :----------------------------------------------------------------------- |
-| data      | Array   | 傳入資料，需有標題`title(String)`, `敘述desc(String)`, `值value(String)` |
-| label-txt | String  | 列表標題                                                                 |
-| required  | Boolean | 必填                                                                     |
-| hasError  | Boolean | 提示框線                                                                 |
+| prop name | type    | 功能                                                           |requried |
+| :-------- | :------ | :------------------------------------------------------------- | :----- |
+| data      | `Array`   | 傳入資料，需有標題`title(String)`, 敘述`desc(String)`, 值`value(String)` | true |
+| v-model | `Array`  | 取得已勾選的值                                                      | false |
+| label-txt | `String`  | 列表標題                                                        | optional |
+|  master-text-title | `String`  | 主勾選標題                                             | optional |
+|  master-text-desc | `String`  | 主勾選註解                                              | optional |
+
