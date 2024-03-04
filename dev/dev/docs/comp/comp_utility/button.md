@@ -4,12 +4,12 @@
 
 ## 簡介
 
-`Button` 元件可擴展 icon 與大小
+`Button` 元件相較於原始 HTML 按鈕，能夠自由添加 icon 以及變更背景和尺寸
 
-## VSCode Snippet（無）
+## VSCode Snippet
 
 ```
-還沒做
+jbutton
 ```
 
 ## 元件程式碼
@@ -17,29 +17,29 @@
 ```javascript
 <template>
   <Button
-    size="base"
-    intent="primary"
-    btnType="filled"
-    borderRound="pill"
-    btnWidth="full"
-    prependIcon="mdi:email-outline"
-    appendIcon="mdi:email-outline"
-    icon="mdi:email-outline"
+    size="按鈕大小設定"
+    intent="使用目的顏色"
+    btnType="按鈕填色方式"
+    borderRound="邊框圓角半徑"
+    btnWidth="按鈕寬度"
+    prependIcon="前置icon"
+    appendIcon="後置icon"
+    icon="icon button使用"
   >
-    按鈕文字
+    按鈕文字。例："確認上傳"
   </Button>
 </template>
 ```
 
 ## 元件 Props
 
-| Prop Name   | type   | 預設         | 說明                                                                    | required |
-| :---------- | :----- | :----------- | :---------------------------------------------------------------------- | :------- |
-| size        | String | xl           | 按鈕大小設定。參數： `xs` `sm` `base` `lg` `lg`                         | true     |
-| intent      | String | 'primary'    | 使用目的顏色選擇。參數： `primary` `secondary` `success` `danger`       | false    |
-| btnType     | String | 'filled'     | 按鈕填色方式。參數： `filled` `outline` `text`                          | false    |
-| borderRound | String | 'md'         | 邊框圓角。參數： `none` `base` `md` `lg` `pill`                         | false    |
-| btnWidth    | String | 'fit'        | 按鈕寬度。參數： `fit` `full`                                           | false    |
-| prependIcon | String | 與 size 連動 | 前置 icon，有值時才會顯示。請透過[連結](https://icones.js.org/)查詢更換 | false    |
-| appendIcon  | String | 與 size 連動 | 後置 icon，有值時才會顯示。請透過[連結](https://icones.js.org/)查詢更換 | false    |
-| icon        | String | 與 size 連動 | icon button 時使用，不得與 `prependIcon` `appendIcon` 連用              | false    |
+| Prop Name   | type   | 預設             | 說明                                                                                                                | required |
+| :---------- | :----- | :--------------- | :------------------------------------------------------------------------------------------------------------------ | :------- |
+| size        | String | xl               | 按鈕大小設定。`xs` 高 32px，`sm` 高 36px，`base` 高 40px，`lg` 高 44px，`xl` 高 48px                                | true     |
+| intent      | String | 'primary'        | 使用目的顏色選擇。參數： `primary` `secondary` `success` `danger`                                                   | false    |
+| btnType     | String | 'filled'         | 按鈕填色方式。`filled` 表示填色按鈕，`outline` 表示外框按鈕，`text` 表示文字按鈕                                    | false    |
+| borderRound | String | 'md'             | 控制邊框圓角半徑。`none` 表示為直角， `base` 圓角半徑 4px，`md` 圓角半徑 6px，`lg` 圓角半徑 8px， `pill` 膠囊型外觀 | false    |
+| btnWidth    | String | 'fit'            | 按鈕寬度。`fit` 表示寬度隨文字內容多寡伸縮 ，`full` 表示寬度 100% 符合容器大小                                      | false    |
+| prependIcon | String | 大小與 size 連動 | 前置 icon，有值時才會顯示。請透過[連結](https://icones.js.org/)查詢更換                                             | false    |
+| appendIcon  | String | 大小與 size 連動 | 後置 icon，有值時才會顯示。請透過[連結](https://icones.js.org/)查詢更換                                             | false    |
+| icon        | String | 與 size 連動     | icon button 時使用，不得與 `prependIcon` `appendIcon` 連用                                                          | false    |

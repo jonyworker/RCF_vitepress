@@ -36,7 +36,7 @@ export default defineConfig({
           text: "通用元件",
           items: [
             { text: "icon", link: "/comp/comp_utility/icon.md" },
-            { text: "button(ing)", link: "/comp/comp_utility/button.md" },
+            { text: "button", link: "/comp/comp_utility/button.md" },
           ],
         },
         {
