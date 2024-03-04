@@ -72,7 +72,7 @@ export default defineConfig({
               link: "/comp/comp_form/radioCombo.md",
             },
             { text: "radioSet（修改中）", link: "/comp/comp_form/radioSet.md" },
-            { text: "select（修改中）", link: "/comp/comp_form/Select.md" },
+            { text: "select", link: "/comp/comp_form/Select.md" },
           ],
         },
       ],

@@ -1,10 +1,8 @@
-# Select<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32" style="vertical-align: text-bottom;padding-left: 8px;color: #aaa;"><path fill="currentColor" d="M5 5v4h1v14H5v4h4v-1h14v1h4v-4h-1V9h1V5h-4v1H9V5zm4 3h14v1h1v14h-1v1H9v-1H8V9h1zm1 2v8h4v4h8v-8h-4v-4zm2 2h4v4h-4zm6 4h2v4h-4v-2h2z"/></svg>
-
-![select component](../../.vuepress/public/select.png)
+# Select <Badge type="info" text="複合元件" />
 
 ## 簡介
 
-`Select` 元件提供了一個下拉選單，讓使用者可以在多個選項中選擇一個。常常被使用在表單中
+`Select` 元件提供了一個下拉選單，讓使用者可以在多個選項中選擇一個。常常被使用在表單中。
 
 ## VSCode Snippet
 
