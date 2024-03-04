@@ -13,10 +13,10 @@ jinput:email（未設定）
 ## 元件程式碼
 
 ```javascript
-import radio-set from './UI/RadioSet.vue'
-```
+<script>
+  import radio-set from './UI/RadioSet.vue'
+</script>
 
-```javascript
 <radioSet 
     :data="data"
     name="name"
