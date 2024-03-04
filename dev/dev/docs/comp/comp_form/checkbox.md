@@ -65,12 +65,12 @@ import check-box from "./UI/Checkbox.vue";
 
 | prop name | type   | 預設    | 說明                                             |
 | :-------- | :----- | :------ | :---------------------------------------------- |
-| check       | String | `left`  | 勾選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | 
-| text        | String | `title` | 子勾選欄字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
-| checkIcon | String | `check` | 勾選框的顯示樣式。`check`顯示 ✓，`line`顯示－  | 
-| disabled   | Boolean  | `false` | 控制元件是否可以勾選，可在元件上設定`ref`控制 |
-| required  | Boolean | `false` | 顯示為必填                  |
-| hasError  | Boolean | `false` | 必填時紅色框線提示           |
+| check       | `String` | `left`  | 勾選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | 
+| text        | `String` | `title` | 勾選欄字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
+| checkIcon | `String` | `check` | 勾選框的顯示樣式。`check`顯示 ✓，`line`顯示－  | 
+| disabled   | `Boolean`  | `false` | 控制元件是否可以勾選，可在元件上設定`ref`控制 |
+| required  | `Boolean` | `false` | 顯示為必填                  |
+| hasError  | `Boolean` | `false` | 必填時紅色框線提示           |
 
 ::: tip ❗ 注意
 樣式 props 不可隨意混用
@@ -109,9 +109,9 @@ import check-box from "./UI/Checkbox.vue";
 
 | prop name | type    | 功能                   |
 | :-------- | :------ |  :--------------------- |
-| name      | String  |  傳資料用，同 html 屬性，指定送出去的該筆資料要用什麼名稱 |
-| value      | String  |  傳資料用，同 html 屬性，指定送出去的該筆資料的值 |
-| isClick    | Boolean  |  勾選時為`true`，反之為`false`，可在元件上設定`ref`取值 |
+| name      | `String`  |  傳資料用，同 html 屬性，指定送出去的該筆資料要用什麼名稱 |
+| value      | `String`  |  傳資料用，同 html 屬性，指定送出去的該筆資料的值 |
+| isClick    | `Boolean`  |  勾選時為`true`，反之為`false`，可在元件上設定`ref`取值 |
 
 ### Slot
 
@@ -122,5 +122,5 @@ import check-box from "./UI/Checkbox.vue";
 
 
 **複合元件**  
-[Checkbox 全選](../compo/checkAll.md)
+[Checkbox 全選](../compo/checkAll.md)  
 [Checkbox 限制勾選](../compo/checkLimit.md)

@@ -1,11 +1,28 @@
 # Radio Combo
 
-## 基礎樣式
+## 簡介
 
-### Import
+`Radio Combo` 元件為二選一的單選組合，使用者可以設定選項文字及必填星號提示。
 
-```jsx
-import RadioCombo from './UI/RadioCombo.vue'
+## VSCode Snippet
+
+```md
+j還沒設定
+```
+
+## 元件程式碼
+
+```javascript
+import radio-combo from './UI/RadioCombo.vue'
+```
+
+```javascript
+    <radio-combo 
+    :name="name"
+    :value1="value1"
+    :value2="value2"
+    label-txt="Radio Combo標題"
+    ></radio-combo>
 ```
 
 ### 樣式props
@@ -15,9 +32,9 @@ import RadioCombo from './UI/RadioCombo.vue'
 
 
 ### 資料props
-| prop name | type | 功能 |
-| :-- | :-- |:--| :--|
-| name | String | 同html屬性 |
-| value1 | String | 選項1的值 |
-| value2 | String | 選項2的值 |
-| label-txt | String | 列表標題 |
+| prop name | type    | 功能                    | requried |
+| :-------- | :------ |  :--------------------- | :------ |
+| name      | `String`  |  傳資料用，同 html 屬性，指定送出去的該筆資料要用什麼名稱 | true |
+| value1 | `String` | 左方欄位的值。傳資料用，同 html 屬性，指定送出去的該筆資料的值 | true |
+| value2 | `String` | 右方欄位的值。傳資料用，同 html 屬性，指定送出去的該筆資料的值 | true |
+| label-txt | `String` | 列表標題 | false |

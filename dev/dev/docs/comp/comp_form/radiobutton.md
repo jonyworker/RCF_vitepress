@@ -57,22 +57,22 @@ import radio-btn from ''
 - check: right/ text: title -->
 
 ### 樣式props
-| prop name | type | 變數 | 功能 |
-| :-- | :-- |:--| :--|
-| radio | String | `left (default)` `right` | 單選鈕位置 |
-| text | String | `title (default)` `desc` `both` | 字體樣式 |
+| prop name | type   | 預設    | 說明                                             |
+| :-------- | :----- | :------ | :---------------------------------------------- |
+| radio     | `String` | `left`  | 單選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | 
+| text      | `String` | `title` | 單選框字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
+| checked   | `Boolean` | `false` | 可控制選擇狀態，`true`為選擇，`false`為未選擇 |
 
 ::: tip ❗注意
  樣式props不可隨意混用 
 :::
 
 ### 資料props
-| prop name | type | 變數 | 功能 |
-| :-- | :-- |:--| :--|
-| name | String | 自行設定 | 傳遞資料用，同html屬性 |
-| value | String | 自行設定 | 傳遞資料用，同html屬性 |
-| checked | Boolean | `true` `false (default)` | 是否勾選 |
+| prop name | type   |  功能      | requried |
+| :-------- | :----- |:---------- | :------ |
+| name      | `String` |  傳遞資料用，同html屬性，指定送出去的該筆資料要用什麼名稱 | true |
+| v-model     | `String` |  傳遞資料用，同html `value`屬性，指定送出去的該筆資料的值 | true |
 
 ## 複合元件
-[Radio Combo](../compo/radioCombo.md)  
-[Radio Set](../compo/radioSet.md)
+[Radio Combo](./radioCombo.md)  
+[Radio Set](./radioSet.md)

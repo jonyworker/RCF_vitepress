@@ -42,8 +42,8 @@ import check-limit from './UI/CheckboxLimit.vue'
 
 | prop name | type   | 預設    | 說明                                             |
 | :-------- | :----- | :------ | :---------------------------------------------- |
-| check       | String | `left`  | 勾選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | 
-| text        | String | `title` | 子勾選欄字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
+| check       | `String` | `left`  | 勾選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | 
+| text        | `String` | `title` | 子勾選欄字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
 
 ### 資料props
 | prop name | type    | 功能                      |
