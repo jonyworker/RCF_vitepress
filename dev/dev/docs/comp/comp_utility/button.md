@@ -4,7 +4,7 @@
 
 ## 簡介
 
-`Button` 元件相較於原始 HTML 按鈕，能夠自由添加 icon 以及變更背景和尺寸
+`Button` 元件相較於原始 HTML 按鈕，能夠自由在按鈕文字兩旁添加 icon 以及變更填色方式、外框和尺寸。
 
 ## VSCode Snippet
 
