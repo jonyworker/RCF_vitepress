@@ -13,16 +13,16 @@ j還沒設定
 ## 元件程式碼
 
 ```javascript
-import radio-combo from './UI/RadioCombo.vue'
-```
+<script>
+    import radio-combo from './UI/RadioCombo.vue'
+</script>
 
-```javascript
-    <radio-combo 
+<radio-combo 
     :name="name"
     :value1="value1"
     :value2="value2"
     label-txt="Radio Combo標題"
-    ></radio-combo>
+></radio-combo>
 ```
 
 ### 樣式props

@@ -16,13 +16,12 @@ jinput:email（未設定）
 
 ```javascript
 <script setup>
-  import { ref, computed } from 'vue';
   import check-set from "./UI/CheckSet.vue";
 </script>
 
 <template>
   <check-set
-    :data="formStore.checkArray"
+    :data="data"
     check="left" 
     master-text="both" 
     text="title"
@@ -61,8 +60,8 @@ jinput:email（未設定）
 
 ### 資料 props
 
-| prop name | type    | 功能                                                           |requried |
-| :-------- | :------ | :------------------------------------------------------------- | :----- |
+| prop name | type    | 功能                                           | requried |
+| :-------- | :------ | :-------------------------------------------- | :----- |
 | data      | `Array`   | 傳入資料，需有標題`title(String)`, 敘述`desc(String)`, 值`value(String)` | true |
 | v-model | `Array`  | 取得已勾選的值                                                      | false |
 | label-txt | `String`  | 列表標題                                                        | optional |

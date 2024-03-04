@@ -13,16 +13,17 @@ j還沒設定
 ## 元件程式碼
 
 ```javascript
-import check-limit from './UI/CheckboxLimit.vue'
-```
+<script>
+  import check-limit from './UI/CheckboxLimit.vue'
+</script>
 
-```javascript
 <check-limit 
-	:data="formStore.checkArray2" text="desc" 
-	:max="4" :min="2"
-	label-txt="勾選列表標題"
-	error-less="選取過少提示字"
-	required
+  :data="data"  
+  text="desc"  
+  :max="4" :min="2"  
+  label-txt="勾選列表標題"  
+  error-less="選取過少提示字"  
+  required  
 ></check-limit>
 ```
 
@@ -46,12 +47,12 @@ import check-limit from './UI/CheckboxLimit.vue'
 | text        | `String` | `title` | 子勾選欄字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
 
 ### 資料props
-| prop name | type    | 功能                      |
-| :-------- | :------ |:------------------------- | 
-| data | `Array` | 傳入資料，需有標題`title(String)`, 註解`desc(String)`, 值`value(String)` |
-| v-model | `Array`  | 取得已勾選的值                        |
-| label-txt | `String` | 列表標題 |
-| error-less | `String` | 少於勾選數量警告 |
-| max | `Number` | 最多勾選數量 |
-| min | `Number` | 最少勾選數量 |
-| required | `Boolean` | 必填 |
+| prop name | type    | 功能                      | requried |
+| :-------- | :------ |:------------------------- | :----- |
+| data | `Array` | 傳入資料，需有標題`title(String)`, 註解`desc(String)`, 值`value(String)` | true |
+| v-model | `Array`  | 取得已勾選的值                        |  false |
+| label-txt | `String` | 列表標題 | false |
+| error-less | `String` | 少於勾選數量警告 | optional |
+| max | `Number` | 最多勾選數量 | optional |
+| min | `Number` | 最少勾選數量 | optional |
+| required | `Boolean` | 必填 | false |

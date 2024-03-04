@@ -13,18 +13,18 @@ j還沒設定
 ## 元件程式碼
 
 ```javascript
-import check-box from "./UI/Checkbox.vue";
-```
+<script>
+    import check-box from "./UI/Checkbox.vue";
+</script>
 
-```javascript
-    <check-box
-    check="left" text="both" 
-    :required="true"  
-    v-model="isCheck" 
-    :hasError="showError">
-      <template v-slot> 勾選欄標題文字 </template>
-      <template v-slot:desc> 勾選欄註解文字 </template>
-    </check-box>
+<check-box
+check="left" text="both" 
+:required="true"  
+v-model="isCheck" 
+:hasError="showError">
+    <template v-slot> 勾選欄標題文字 </template>
+    <template v-slot:desc> 勾選欄註解文字 </template>
+</check-box>
 ```
 
 <div style="display: flex;">
@@ -107,18 +107,18 @@ import check-box from "./UI/Checkbox.vue";
 
 ### 資料設定
 
-| prop name | type    | 功能                   |
-| :-------- | :------ |  :--------------------- |
-| name      | `String`  |  傳資料用，同 html 屬性，指定送出去的該筆資料要用什麼名稱 |
-| value      | `String`  |  傳資料用，同 html 屬性，指定送出去的該筆資料的值 |
-| isClick    | `Boolean`  |  勾選時為`true`，反之為`false`，可在元件上設定`ref`取值 |
+| prop name | type    | 功能                   | requried |
+| :-------- | :------ |  :--------------------- | :----- |
+| name      | `String`  |  傳資料用，同 html 屬性，指定送出去的該筆資料要用什麼名稱 | true |
+| value      | `String`  |  傳資料用，同 html 屬性，指定送出去的該筆資料的值 | true |
+| isClick    | `Boolean`  |  勾選時為`true`，反之為`false`，可在元件上設定`ref`取值 | false |
 
 ### Slot
 
-| v-slot    | 功能                        | required |
-| :-------- |  :------------------------- | :------ |
-| `default` |  填入大標題 | false |
-| `desc` |  填入註解內容 | false |
+| v-slot    | 功能                        | 
+| :-------- |  :------------------------- | 
+| `default` |  填入大標題 | 
+| `desc` |  填入註解內容 | 
 
 
 **複合元件**  
