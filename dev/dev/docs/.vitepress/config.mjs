@@ -5,6 +5,9 @@ export default defineConfig({
   title: "RCF Comp. Library",
   description: "A VitePress Site",
   themeConfig: {
+    search: {
+      provider: "local",
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       // { text: "Home", link: "/" },
@@ -44,15 +47,28 @@ export default defineConfig({
 
           items: [
             { text: "checkAll（修改中）", link: "/comp/comp_form/checkAll.md" },
-            { text: "checkbox（修改中）", link: "/comp/comp_form/checkbox.md" },
+
             {
-              text: "checkLimit（修改中）",
-              link: "/comp/comp_form/checkLimit.md",
+              text: "checkbox:basic（新編）",
+              link: "/comp/comp_form/checkbox.md",
+            },
+            {
+              text: "checkbox:limit（新編）",
+              link: "/comp/comp_form/checkboxLimit.md",
+            },
+            {
+              text: "checkbox（舊）",
+              link: "/comp/comp_form/checkbox_copy.md",
+            },
+            {
+              text: "checkLimit（舊）",
+              link: "/comp/comp_form/checkLimit_copy.md",
             },
             {
               text: "輸入框",
               // collapsed: true,
               items: [
+                { text: "input:label", link: "/comp/comp_form/InputLabel.md" },
                 { text: "input:wrap", link: "/comp/comp_form/InputWrap.md" },
                 { text: "input:basic", link: "/comp/comp_form/InputBasic.md" },
                 { text: "input:email", link: "/comp/comp_form/InputEmail.md" },
