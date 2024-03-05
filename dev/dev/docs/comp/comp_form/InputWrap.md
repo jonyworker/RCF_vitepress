@@ -45,6 +45,6 @@ jinput:wrap
 | tailHint      | `String`  | Null  | 標題尾提示。`charLimit` 表示字數提示，`optional` 表示非必填 | false    |
 | maxLength     | `String`  | Null  | 設定字數提示最大文字限制                                    | false    |
 | currentLength | `Number`  | Null  | 顯示總輸入字數提示                                          | false    |
-| valid         | `Boolean` | true  | 前端驗證結果                                                | false    |
+| valid         | `Boolean` | true  | 前端驗證結果（驗證失敗紅框顯示）                            | false    |
 | errorMsg      | `String`  | Null  | 前端格式驗證錯誤結果提示                                    | false    |
 | helperMsg     | `String`  | Null  | 輸入框輸入輔助提示                                          | false    |
