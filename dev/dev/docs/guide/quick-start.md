@@ -15,11 +15,13 @@ $ cd 目標資料夾
 ::: warning
 兼容性注意！
 Vite 需要 [Node.js](https://nodejs.org/en/) 版本 18+，20+。
-安裝前請執行下列指令檢查 node 版本
+專案建置前請執行下列指令檢查 node 版本
 
 ```cmd
 $ node -v
 ```
+
+如尚未安裝請[由此](install-node.md)參考 Node.js 安裝方式
 
 :::
 
