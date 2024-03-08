@@ -6,29 +6,25 @@
 
 `Input Email`是以 [Input Basic](InputBasic) 為基礎搭建的元件，提供了一個輸入框，讓使用者可以輸入 email。含有基本的 email 前端格式驗證。
 
-## VSCode Snippet
-
-```md
-jinput:email
-```
-
 ## 元件程式碼
 
-```javascript
+::: code-group
+
+```vue [Vue]
 <script setup>
-  import { ref, computed } from 'vue';
-  import InputField from './UI/Form/InputField.vue'
-  import InputText from './UI/Form/InputText.vue'
-  // [電子郵件資料及前端格式檢查]
-  const emailData = ref('')
-  const emailErrorMsg = ref('Email格式不正確')
-  const emailHelperMsg = ref('')
-  const isValidEmail = computed(() => {
-    // email格式驗證
-    return emailData.value != ''
-      ? /^+([-]?+)*@+([-]?+)*({2,3})+$/.test(emailData.value)
-      : null
-  })
+import { ref, computed } from "vue";
+import InputField from "./UI/Form/InputField.vue";
+import InputText from "./UI/Form/InputText.vue";
+// [電子郵件資料及前端格式檢查]
+const emailData = ref("");
+const emailErrorMsg = ref("Email格式不正確");
+const emailHelperMsg = ref("");
+const isValidEmail = computed(() => {
+  // email格式驗證
+  return emailData.value != ""
+    ? /^+([-]?+)*@+([-]?+)*({2,3})+$/.test(emailData.value)
+    : null;
+});
 </script>
 
 <template>
@@ -50,6 +46,12 @@ jinput:email
   </InputField>
 </template>
 ```
+
+```cmd [VSCode Snippet]
+jinput:email
+```
+
+:::
 
 :::warning
 [InputWrap 元件詳細設定請參照此連結](InputWrap)

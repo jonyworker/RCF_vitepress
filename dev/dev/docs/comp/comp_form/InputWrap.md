@@ -2,38 +2,38 @@
 
 ## 簡介
 
-`Input Wrap` 元件提供了一個輸入框的外框樣式集合，包含輸入框標題、必填星號提示、字數提示、輸入框外框樣式、錯誤訊息提示、幫助訊息提示。
-
-## VSCode Snippet
-
-```md
-jinput:wrap
-```
+`Input Wrap` 元件提供了一個輸入框的外框樣式集合，包含輸入框標題、必填星號提示、字數提示、輸入框外框樣式、錯誤訊息提示、幫助訊息提示。通常與 `Input Basic` 、 `Input Textarea` 等表單元件搭配使用，不適合單獨使用。
 
 ## 元件程式碼
 
-```javascript
-<script setup>
-  import InputField from './UI/Form/InputField.vue'
+::: code-group
+
+```vue [Vue]
+<script>
+import InputField from "./UI/Form/InputField.vue";
 </script>
 
-<InputField
-  for="對應input name"
-  label="輸入框標題"
-  required
-  tailHint="optional"
-  tailHint="charLimit"
-  maxLength="最大字數限制"
-  currentLength="總輸入字數提示"
-  :valid="前端驗證結果(Boolean)"
-  :errorMsg="前端格式驗證錯誤結果提示"
-  :helperMsg="輸入框輸入輔助提示"
->
-
-  <!-- 表單類型元件放置區塊 -->
-
-</InputField>
+<template>
+  <InputField
+    for="對應input name"
+    label="輸入框標題"
+    required
+    tailHint="optional"
+    tailHint="charLimit"
+    maxLength="最大字數限制"
+    currentLength="總輸入字數提示"
+    :valid="前端驗證結果(Boolean)"
+    :errorMsg="前端格式驗證錯誤結果提示"
+    :helperMsg="輸入框輸入輔助提示"
+  ></InputField>
+</template>
 ```
+
+```cmd [VSCode Snippet]
+jinput:wrap
+```
+
+:::
 
 ## 元件 Props
 
