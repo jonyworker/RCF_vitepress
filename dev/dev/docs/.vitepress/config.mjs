@@ -46,32 +46,59 @@ export default defineConfig({
           text: "表單元件",
 
           items: [
-            { text: "checkAll（修改中）", link: "/comp/comp_form/checkAll.md" },
-
             {
-              text: "checkbox:basic（新編）",
-              link: "/comp/comp_form/checkbox.md",
-            },
-            {
-              text: "checkbox:limit（新編）",
-              link: "/comp/comp_form/checkboxLimit.md",
-            },
-            {
-              text: "checkbox（舊）",
-              link: "/comp/comp_form/checkbox_copy.md",
-            },
-            {
-              text: "checkLimit（舊）",
-              link: "/comp/comp_form/checkLimit_copy.md",
-            },
-            {
-              text: "輸入框",
+              text: "Checkbox",
               // collapsed: true,
               items: [
-                { text: "input:label", link: "/comp/comp_form/InputLabel.md" },
-                { text: "input:wrap", link: "/comp/comp_form/InputWrap.md" },
-                { text: "input:basic", link: "/comp/comp_form/InputBasic.md" },
-                { text: "input:email", link: "/comp/comp_form/InputEmail.md" },
+                {
+                  text: "Checkbox Basic",
+                  link: "/comp/comp_form/checkboxBasic.md",
+                },
+                {
+                  text: "Checkbox Master",
+                  link: "/comp/comp_form/checkboxMaster.md",
+                },
+                {
+                  text: "Checkbox Select All",
+                  link: "/comp/comp_form/checkboxSelectAll.md",
+                },
+                {
+                  text: "checkbox:limit 未",
+                  link: "/comp/comp_form/checkboxLimit.md",
+                },
+
+                {
+                  text: "待刪(舊)",
+                  collapsed: true,
+                  items: [
+                    {
+                      text: "checkbox（舊）",
+                      link: "/comp/comp_form/checkbox_copy.md",
+                    },
+                    {
+                      text: "checkAll（舊）",
+                      link: "/comp/comp_form/checkAll.md",
+                    },
+                    {
+                      text: "checkLimit（舊）",
+                      link: "/comp/comp_form/checkLimit_copy.md",
+                    },
+                    {
+                      text: "checkLimit（舊）",
+                      link: "/comp/comp_form/checkLimit_copy.md",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              text: "Input",
+              // collapsed: true,
+              items: [
+                { text: "input Label", link: "/comp/comp_form/InputLabel.md" },
+                { text: "input Wrap", link: "/comp/comp_form/InputWrap.md" },
+                { text: "Input Basic", link: "/comp/comp_form/InputBasic.md" },
+                { text: "Input Email", link: "/comp/comp_form/InputEmail.md" },
                 {
                   text: "input:number",
                   link: "/comp/comp_form/InputNumber.md",
