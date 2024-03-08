@@ -16,21 +16,10 @@ outline: deep
 
 ::: code-group
 
-```javascript [Vue 3]
-<script>
+```vue [Vue 3]
+<script></script>
 
-</script>
-
-<template>
-    外props:
-    v-model
-    label
-    max
-    min
-        內props:
-
-
-</template>
+<template>外props: v-model label max min 內props:</template>
 ```
 
 ```javascript [v-model格式]
