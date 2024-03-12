@@ -2,39 +2,42 @@
 
 ## 簡介
 
-`Radio Combo` 元件為二選一的單選組合，使用者可以設定選項文字及必填星號提示。
+`Radio Combo` 元件為兩個選項的的單選組合，使用者可以設定選項標題或增加選項輔助說明。
 
 ## VSCode Snippet
 
-```md
-j還沒設定
-```
+::: code-group
 
-## 元件程式碼
-
-```javascript
+```vue [Vue]
 <script>
     import radio-combo from './UI/RadioCombo.vue'
+    const comboArray = ref([])
 </script>
 
-<radio-combo 
-    :name="name"
-    :value1="value1"
-    :value2="value2"
-    label-txt="Radio Combo標題"
-></radio-combo>
+<template>
+    <radio-combo 
+    label1="左側選項標題"
+    label2="右側選項標題"
+    value1="左側選項初始值(與資料庫對應)"
+    value2="右側選項初始值(與資料庫對應)"
+    name="選項名(資料庫欄位位置)"
+    v-model="comboArray雙向綁定資料"
+    ></radio-combo>
+<template/>
 ```
 
-### 樣式props
-| prop name | type | 變數 | 功能 |
-| :-- | :-- |:--| :--|
-| 無 |  |  |  |
+```cmd [VSCode Snippet]
+j還沒設定
+```
+:::
 
+### props
 
-### 資料props
 | prop name | type    | 功能                    | requried |
 | :-------- | :------ |  :--------------------- | :------ |
-| name      | `String`  |  傳資料用，同 html 屬性，指定送出去的該筆資料要用什麼名稱 | true |
-| value1 | `String` | 左方欄位的值。傳資料用，同 html 屬性，指定送出去的該筆資料的值 | true |
-| value2 | `String` | 右方欄位的值。傳資料用，同 html 屬性，指定送出去的該筆資料的值 | true |
-| label-txt | `String` | 列表標題 | false |
+| label1 | `String` | 左側選項標題               | true |
+| label2 | `String` | 右側選項標題               | true |
+| value1 | `String` | 左側選項初始值，同 html 屬性，與資料庫對應 | true |
+| value2 | `String` | 右側選項初始值，同 html 屬性，與資料庫對應 | true |
+| name      | `String`  |  選項名，資料庫欄位值  | true |
+| v-model      | `any[]`  |  與父層雙向綁定資料 | true |

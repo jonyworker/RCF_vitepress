@@ -2,77 +2,98 @@
 
 ## 簡介
 
-`Radio button` 元件為基礎的單選框。 
-
-## VSCode Snippet
-
-```md
-j還沒設定
-```
+`Radio button` 為單選元件。在表單中通常以複數的形式出現。使用者可以設定選項標題或增加選項輔助說明，或依需求決定讓勾選框位於選項標題左側或右側。 
 
 ## 元件程式碼
 
-```javascript
-import radio-btn from ''
+::: code-group
+
+```vue [Vue]
+<script setup>
+    import radio-btn from './UI/From/RadioBtn.vue'
+<script/>
+
+<template>
+    <radio-btn
+        label="選項的標題"
+        desc-msg="選項的註解"
+        value="選項初始值(與資料庫對應)"
+        name="選項名(資料庫欄位值)"
+        position="勾選框位置"
+        v-model="radioValue雙向綁定資料"
+    >
+    </radio-btn>
+<template />
 ```
-```javascript
-<radio 
-    :data="formStore.radioArray"
-    name="列表名稱"
-    radio="left" text="desc" 
-    label-txt="三選一"
->
-</radio> 
+
+```cmd [VSCode Snippet]
+j還沒設定
 ```
-
-<div style="display: flex;">
-    <div>
-        圖片
-    </div>
-    <div>
-        <ul>
-            <li>
-                check: left / text: title
-            </li>
-            <li>
-                check: left / text: both
-            </li>
-            <li>
-                check: left / text: desc
-            </li>
-            <li>
-                check: right/ text: both
-            </li>
-            <li>
-                check: right/ text: title
-            </li>
-        </ul>
-    </div>
-</div>
-
-<!-- - check: left / text: title
-- check: left / text: both
-- check: left / text: desc
-- check: right/ text: both
-- check: right/ text: title -->
-
-### 樣式props
-| prop name | type   | 預設    | 說明                                             |
-| :-------- | :----- | :------ | :---------------------------------------------- |
-| radio     | `String` | `left`  | 單選框位置 `left`表示在標題左邊，`right`表示在標題右邊 | 
-| text      | `String` | `title` | 單選框字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
-| checked   | `Boolean` | `false` | 可控制選擇狀態，`true`為選擇，`false`為未選擇 |
-
-::: tip ❗注意
- 樣式props不可隨意混用 
 :::
 
-### 資料props
-| prop name | type   |  功能      | requried |
-| :-------- | :----- |:---------- | :------ |
-| name      | `String` |  傳遞資料用，同html屬性，指定送出去的該筆資料要用什麼名稱 | true |
-| v-model     | `String` |  傳遞資料用，同html `value`屬性，指定送出去的該筆資料的值 | true |
+## 元件 props
+
+| prop name  | type     | 預設       | 說明                                                       | required |
+| :--------- | :------- | :--------- | :---------------------------------------------- | :------- |
+| label      | `String` | `選項標題` | 選項標題                                                   | false    |
+| descMsg    | `String` | `null`     | 選項輔助說明                                               | false    |
+| value      | `String` | `null`     | 選項初始值，與資料庫對應的值                               | false    |
+| name       | `String` | `null`     | 選項名，資料庫欄位值                                       | false    |
+| position   | `String` | `prepend`  | 勾選框位置 `prepend`表示在標題左邊，`append`表示在標題右邊 | false    |
+| block      | `String` | `null`     | 選項標題與選項說明，換行顯示                               | false    |
+| v-model | `any[]`  | `null`     | 與父層雙向綁定資料                                         | false    |
+
 
 ## 複合元件
-[Radio Combo](./radioCombo.md)  
-[Radio Set](./radioSet.md)
+
+使用迴圈渲染 `Radio button` 製作的單選列表。
+
+## 元件程式碼
+
+::: code-group
+
+```vue [Vue]
+<script setup>
+    import radio-btn from './UI/From/RadioBtn.vue'
+    const radioValue = ref([])
+
+    const data = [
+        {
+            label: 'T恤',
+            descMsg: '舒適的棉質T恤，適合日常穿著',
+            value: 'tshirt',
+            name: 'tshirt'
+        },
+        {
+            label: '牛仔褲',
+            descMsg: '經典的牛仔褲，適合休閒或正式場合穿著',
+            value: 'jeans',
+            name: 'jeans'
+        },
+        {
+            label: '運動鞋',
+            descMsg: '時尚舒適的運動鞋，適合全天穿著',
+            value: 'sneakers',
+            name: 'sneakers'
+        }
+    ]
+<script/>
+
+<template>
+    <radio-btn
+        v-for="(item, index) in data"
+        label="item.選項的標題"
+        desc-msg="item.選項的註解"
+        value="item.選項初始值(與資料庫對應)"
+        name="item.選項名(資料庫欄位值)"
+        position="勾選框位置"
+        v-model="radioValue雙向綁定資料"
+    >
+    </radio-btn>
+<template />
+```
+
+```cmd [VSCode Snippet]
+j還沒設定
+```
+:::
