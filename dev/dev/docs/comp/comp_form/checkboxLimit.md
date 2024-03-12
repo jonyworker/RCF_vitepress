@@ -2,11 +2,11 @@
 outline: deep
 ---
 
-# Checkbox:limit（新編） <Badge type="info" text="單一元件" />
+# Checkbox Limit <Badge type="info" text="複合元件" />
 
 ## 簡介
 
-以`Checkbox` 元件為基礎組合成的 `Checkbox:limit`，使用者可以自由增加 `勾選框` 數量，並設定最少選擇數量和最多選擇數量。當使用者在選擇指定數量的欄位後，系統會自動鎖定其他未被選中的欄位，防止在超出指定數量的情況下進行多餘的選擇。
+`Checkbox Limit` 是以 `Checkbox Limit Control` 與 `Checkbox Basic` 組合成的複合元件元件，開發人員者可依需求，自由設定最低與最多選擇數量。當使用者在選擇到達指定數量的後，系統會自動鎖定其他未被選中的選項，避免多餘的選擇。下方提供一個範例程式碼，可用來了解其運作方式。
 
 ```
 圖片
@@ -17,19 +17,65 @@ outline: deep
 ::: code-group
 
 ```vue [Vue 3]
-<script></script>
+<script>
+import InputLabel from "./UI/Form/InputLabel.vue";
+import CheckboxLimitControl from "./UI/checkboxLimitCtrl.vue";
+import checkBox from "./UI/Checkbox.vue";
 
-<template>外props: v-model label max min 內props:</template>
-```
-
-```javascript [v-model格式]
-const checkboxOptions = ref([
-  {
-    label: "選項標題",
-    value: 選項值,
-  },
-  //...等
+const limitCheckOptions = ref([
+  { title: "因為價格便宜", value: "v-option01", name: "limitOptions" },
+  { title: "好友極力推薦", value: "v-option02", name: "limitOptions" },
+  { title: "比較同類產品後決定", value: "v-option03", name: "limitOptions" },
+  { title: "功能與設計符合需求", value: "v-option04", name: "limitOptions" },
+  { title: "沒有多餘的耗材", value: "v-option05", name: "limitOptions" },
 ]);
+const limitCheckedList = ref([]); // checked 的選項 v-model
+const minCheck = ref(1); //設定最少選項
+const maxCheck = ref(3); //設定最多選項
+const checkboxes = ref([]); //ref變數
+const isDisable = ref(); //  v-model 控制disable
+
+const disabledControl = () => {
+  if (isDisable.value) {
+    checkboxes.value.forEach((item) => {
+      if (item.isClick == false) {
+        item.disabled = true;
+      }
+    });
+  } else {
+    checkboxes.value.forEach((item) => {
+      item.disabled = false;
+    });
+  }
+};
+</script>
+
+<template>
+  <InputLabel>請選擇影響您購買本產品的原因</InputLabel>
+  <CheckboxLimitControl
+    :minCheck="minCheck"
+    :maxCheck="maxCheck"
+    v-model="limitCheckedList"
+    v-model:isDisable="isDisable"
+    :errorMsg="`最少要選擇 ${minCheck} 個選項喔`"
+    :helperMsg="`請選擇最少 ${minCheck} 個，最多 ${maxCheck} 個選項`"
+  >
+    <div class="flex flex-col gap-2">
+      <check-box
+        ref="checkboxes"
+        v-for="(item, index) in limitCheckOptions"
+        :key="`${index}${item}`"
+        :label="item.title"
+        :descMsg="item.desc"
+        :value="item.value"
+        :name="item.name"
+        position="prepend"
+        v-model="limitCheckedList"
+        @change="disabledControl()"
+      ></check-box>
+    </div>
+  </CheckboxLimitControl>
+</template>
 ```
 
 ```cmd [VSCode Snippet]
@@ -37,27 +83,3 @@ jcheck:limit
 ```
 
 :::
-
-## 元件 props
-
-| prop name | type | 預設 | 說明 |
-| :-------- | :--- | :--- | :--- |
-
-### 樣式 props（舊）
-
-| prop name | type     | 預設    | 說明                                                                                            |
-| :-------- | :------- | :------ | :---------------------------------------------------------------------------------------------- |
-| check     | `String` | `left`  | 勾選框位置 `left`表示在標題左邊，`right`表示在標題右邊                                          |
-| text      | `String` | `title` | 子勾選欄字體樣式。`title`表示文字只有標題，`desc`表示文字只有註解，`both`表示文字有標題也有註解 |
-
-### 資料 props（舊）
-
-| prop name  | type      | 功能                                                                     | requried |
-| :--------- | :-------- | :----------------------------------------------------------------------- | :------- |
-| data       | `Array`   | 傳入資料，需有標題`title(String)`, 註解`desc(String)`, 值`value(String)` | true     |
-| v-model    | `Array`   | 取得已勾選的值                                                           | false    |
-| label-txt  | `String`  | 列表標題                                                                 | false    |
-| error-less | `String`  | 少於勾選數量警告                                                         | optional |
-| max        | `Number`  | 最多勾選數量                                                             | optional |
-| min        | `Number`  | 最少勾選數量                                                             | optional |
-| required   | `Boolean` | 必填                                                                     | false    |
