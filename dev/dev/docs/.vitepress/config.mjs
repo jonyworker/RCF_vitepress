@@ -63,7 +63,11 @@ export default defineConfig({
                   link: "/comp/comp_form/checkboxSelectAll.md",
                 },
                 {
-                  text: "checkbox:limit 未",
+                  text: "checkbox Limit Control",
+                  link: "/comp/comp_form/checkboxLimitCtrl.md",
+                },
+                {
+                  text: "checkbox Limit Select",
                   link: "/comp/comp_form/checkboxLimit.md",
                 },
 
@@ -100,8 +104,17 @@ export default defineConfig({
                 { text: "Input Basic", link: "/comp/comp_form/InputBasic.md" },
                 { text: "Input Email", link: "/comp/comp_form/InputEmail.md" },
                 {
-                  text: "input:number",
+                  text: "input Number",
                   link: "/comp/comp_form/InputNumber.md",
+                },
+                { text: "Input Date", link: "/comp/comp_form/InputDate.md" },
+                {
+                  text: "Input Textarea",
+                  link: "/comp/comp_form/InputTextarea.md",
+                },
+                {
+                  text: "Input Password",
+                  link: "/comp/comp_form/InputPassword.md",
                 },
               ],
             },
