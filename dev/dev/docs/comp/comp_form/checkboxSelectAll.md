@@ -6,7 +6,7 @@ outline: deep
 
 ## 簡介
 
-`Checkbox SelectAll` 是以 `CheckBox Master` 與 `Checkbox Basic` 組合成的複合元件，常用在 `table 表格` 中，提供使用者「一次全部選取」或是「一次全部取消」功能。本元件提供了基礎的互動設定。
+`Checkbox SelectAll` 是以 `CheckBox Master` 與 `Checkbox Basic` 組合成的複合元件，常用在 `table 表格` 中。提供使用者「一次全部選取」或是「一次全部取消」功能。本元件提供了基礎的互動設定。其中的 `Checkbox Master` 是一個控制器元件， 是 `Checkbox Select All` 的專屬附屬元件，無法單獨使用。
 
 ```
 示意圖片（未）
@@ -87,12 +87,28 @@ jcheck:all
 
 ## 元件 props
 
-| prop name  | type     | 預設       | 說明                                                       | required |
-| :--------- | :------- | :--------- | :--------------------------------------------------------- | :------- |
-| label      | `String` | `選項標題` | 選項標題                                                   | false    |
-| descMsg    | `String` | `null`     | 選項輔助說明                                               | false    |
-| value      | `String` | `null`     | 選項初始值，與資料庫對應的值                               | false    |
-| name       | `String` | `null`     | 選項名，資料庫欄位值                                       | false    |
-| position   | `String` | `prepend`  | 勾選框位置 `prepend`表示在標題左邊，`append`表示在標題右邊 | false    |
-| block      | `String` | `null`     | 選項標題與選項說明，換行顯示                               | false    |
-| modelValue | `any[]`  | `null`     | 與父層雙向綁定資料                                         | false    |
+#### Checkbox Master 元件
+
+| prop name   | type     | 預設        | 說明                                                                                                                                                     | required |
+| :---------- | :------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- |
+| label       | `String` | `選項標題`  | 選項標題                                                                                                                                                 | false    |
+| descMsg     | `String` | `null`      | 選項輔助說明                                                                                                                                             | false    |
+| block       | `String` | `null`      | 選項標題與選項說明，換行顯示                                                                                                                             | false    |
+| checkStatus | `String` | `checkNone` | `Checkbox Master` 選取狀態。`checkNone`表示沒有任何選項被選取狀態，`indeterminate`表示選擇選項一個以上，未達全選狀態，`checkAll`表示全部選項被選取狀態。 | true     |
+| value       | `String` | `null`      | 選項初始值，與資料庫對應的值                                                                                                                             | false    |
+| name        | `String` | `null`      | 選項名，資料庫欄位值                                                                                                                                     | false    |
+| position    | `String` | `prepend`   | 勾選框位置 `prepend`表示在標題左邊，`append`表示在標題右邊                                                                                               | false    |
+| modelValue  | `any[]`  | `null`      | 與父層雙向綁定資料                                                                                                                                       | false    |
+
+#### Checkbox Basic 元件
+
+| prop name   | type     | 預設        | 說明                                                                                                                                                     | required |
+| :---------- | :------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- |
+| label       | `String` | `選項標題`  | 選項標題                                                                                                                                                 | false    |
+| descMsg     | `String` | `null`      | 選項輔助說明                                                                                                                                             | false    |
+| block       | `String` | `null`      | 選項標題與選項說明，換行顯示                                                                                                                             | false    |
+| checkStatus | `String` | `checkNone` | `Checkbox Master` 選取狀態。`checkNone`表示沒有任何選項被選取狀態，`indeterminate`表示選擇選項一個以上，未達全選狀態，`checkAll`表示全部選項被選取狀態。 | true     |
+| value       | `String` | `null`      | 選項初始值，與資料庫對應的值                                                                                                                             | false    |
+| name        | `String` | `null`      | 選項名，資料庫欄位值                                                                                                                                     | false    |
+| position    | `String` | `prepend`   | 勾選框位置 `prepend`表示在標題左邊，`append`表示在標題右邊                                                                                               | false    |
+| modelValue  | `any[]`  | `null`      | 與父層雙向綁定資料                                                                                                                                       | false    |

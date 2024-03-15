@@ -37,6 +37,7 @@ export default defineConfig({
       "/comp/": [
         {
           text: "通用元件",
+          collapsed: true,
           items: [
             { text: "icon", link: "/comp/comp_utility/icon.md" },
             { text: "button", link: "/comp/comp_utility/button.md" },
@@ -44,7 +45,7 @@ export default defineConfig({
         },
         {
           text: "表單元件",
-
+          collapsed: true,
           items: [
             {
               text: "Checkbox",
@@ -55,44 +56,40 @@ export default defineConfig({
                   link: "/comp/comp_form/checkboxBasic.md",
                 },
                 {
-                  text: "Checkbox Master",
-                  link: "/comp/comp_form/checkboxMaster.md",
-                },
-                {
                   text: "Checkbox Select All",
                   link: "/comp/comp_form/checkboxSelectAll.md",
                 },
-                {
-                  text: "checkbox Limit Control",
-                  link: "/comp/comp_form/checkboxLimitCtrl.md",
-                },
+                // {
+                //   text: "checkbox Limit Control",
+                //   link: "/comp/comp_form/checkboxLimitCtrl.md",
+                // },
                 {
                   text: "checkbox Limit Select",
                   link: "/comp/comp_form/checkboxLimit.md",
                 },
 
-                {
-                  text: "待刪(舊)",
-                  collapsed: true,
-                  items: [
-                    {
-                      text: "checkbox（舊）",
-                      link: "/comp/comp_form/checkbox_copy.md",
-                    },
-                    {
-                      text: "checkAll（舊）",
-                      link: "/comp/comp_form/checkAll.md",
-                    },
-                    {
-                      text: "checkLimit（舊）",
-                      link: "/comp/comp_form/checkLimit_copy.md",
-                    },
-                    {
-                      text: "checkLimit（舊）",
-                      link: "/comp/comp_form/checkLimit_copy.md",
-                    },
-                  ],
-                },
+                // {
+                //   text: "待刪(舊)",
+                //   collapsed: true,
+                //   items: [
+                //     {
+                //       text: "checkbox（舊）",
+                //       link: "/comp/comp_form/checkbox_copy.md",
+                //     },
+                //     {
+                //       text: "checkAll（舊）",
+                //       link: "/comp/comp_form/checkAll.md",
+                //     },
+                //     {
+                //       text: "checkLimit（舊）",
+                //       link: "/comp/comp_form/checkLimit_copy.md",
+                //     },
+                //     {
+                //       text: "checkLimit（舊）",
+                //       link: "/comp/comp_form/checkLimit_copy.md",
+                //     },
+                //   ],
+                // },
               ],
             },
             {

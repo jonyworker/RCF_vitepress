@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Checkbox Master <Badge type="info" text="單一元件" />
+# Checkbox Master（不顯示在目錄中） <Badge type="info" text="單一元件" />
 
 ## 簡介
 
