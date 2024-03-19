@@ -1,7 +1,5 @@
 # Input Email <Badge type="info" text="複合元件" />
 
-![input email component](../../.vuepress/public/inputemail.png)
-
 ## 簡介
 
 `Input Email`是以 [Input Basic](InputBasic) 為基礎搭建的元件，提供了一個輸入框，讓使用者可以輸入 email。含有基本的 email 前端格式驗證。

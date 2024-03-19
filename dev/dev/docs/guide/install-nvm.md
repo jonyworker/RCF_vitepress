@@ -49,7 +49,7 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bas
 這些指令會將 NVM 倉庫複製到裝置上的~/.nvm 目錄。
 
 安裝後預期會顯示以下片段及算安裝完成，而此時如果你有安裝其它指令工具，有可能會發生輸入 nvm 無法呼叫的狀況（例如：zsh: command not found: nvm）。
-![](../public/pics/install-nvm/nvm_mac_download_1.jpg)
+![](../public/pics/install-nvm/nvm_mac_download_1.png)
 接下來可以在你所使用的命令設定檔案加入以下片段程式碼，以下提供 bash、zsh 的說明，兩者依據環境選擇其一即可：
 
 - bash（預設）
@@ -58,7 +58,7 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bas
 #### bash:
 
 預設的情況下，MacOS 中可能沒有任何一個指令設定檔案，此時可以使用 touch ~/.bash_profile 新增一個文字檔案在根目錄上，接下來回到資料根目錄可以找到 .bash_profile，沒看到的話代表未開啟隱藏檔案顯示，可以按下 Command + Shift+ . 顯示。
-![](../public/pics/install-nvm/nvm_mac_download_2.jpg)
+![](../public/pics/install-nvm/nvm_mac_download_2.png)
 接下來使用任何文字編輯器打開該檔案，並加入以下程式碼存檔即可。
 
 ```cmd
