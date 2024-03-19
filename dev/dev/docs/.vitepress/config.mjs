@@ -4,6 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "RCF Comp. Library",
   description: "A VitePress Site",
+  base: "/RCF_vitepress/",
   themeConfig: {
     search: {
       provider: "local",
@@ -56,62 +57,36 @@ export default defineConfig({
                   link: "/comp/comp_form/checkboxBasic.md",
                 },
                 {
+                  text: "Checkbox Limit Select",
+                  link: "/comp/comp_form/checkboxLimit.md",
+                },
+                {
                   text: "Checkbox Select All",
                   link: "/comp/comp_form/checkboxSelectAll.md",
                 },
-                // {
-                //   text: "checkbox Limit Control",
-                //   link: "/comp/comp_form/checkboxLimitCtrl.md",
-                // },
-                {
-                  text: "checkbox Limit Select",
-                  link: "/comp/comp_form/checkboxLimit.md",
-                },
-
-                // {
-                //   text: "待刪(舊)",
-                //   collapsed: true,
-                //   items: [
-                //     {
-                //       text: "checkbox（舊）",
-                //       link: "/comp/comp_form/checkbox_copy.md",
-                //     },
-                //     {
-                //       text: "checkAll（舊）",
-                //       link: "/comp/comp_form/checkAll.md",
-                //     },
-                //     {
-                //       text: "checkLimit（舊）",
-                //       link: "/comp/comp_form/checkLimit_copy.md",
-                //     },
-                //     {
-                //       text: "checkLimit（舊）",
-                //       link: "/comp/comp_form/checkLimit_copy.md",
-                //     },
-                //   ],
-                // },
               ],
             },
             {
               text: "Input",
               // collapsed: true,
               items: [
-                { text: "input Label", link: "/comp/comp_form/InputLabel.md" },
-                { text: "input Wrap", link: "/comp/comp_form/InputWrap.md" },
                 { text: "Input Basic", link: "/comp/comp_form/InputBasic.md" },
                 { text: "Input Email", link: "/comp/comp_form/InputEmail.md" },
+
+                { text: "input Wrap", link: "/comp/comp_form/InputWrap.md" },
                 {
                   text: "input Number",
                   link: "/comp/comp_form/InputNumber.md",
                 },
                 { text: "Input Date", link: "/comp/comp_form/InputDate.md" },
-                {
-                  text: "Input Textarea",
-                  link: "/comp/comp_form/InputTextarea.md",
-                },
+
                 {
                   text: "Input Password",
                   link: "/comp/comp_form/InputPassword.md",
+                },
+                {
+                  text: "Input Textarea",
+                  link: "/comp/comp_form/InputTextarea.md",
                 },
               ],
             },
@@ -126,6 +101,13 @@ export default defineConfig({
             },
             { text: "radioSet（修改中）", link: "/comp/comp_form/radioSet.md" },
             { text: "select", link: "/comp/comp_form/Select.md" },
+            {
+              text: "表單用通用元件",
+              // collapsed: true,
+              items: [
+                { text: "input Label", link: "/comp/comp_form/InputLabel.md" },
+              ],
+            },
           ],
         },
       ],
